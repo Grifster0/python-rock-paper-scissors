@@ -1,0 +1,63 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+options = [rock,paper,scissors]
+choices = ["0", "1", "2"]
+
+computer_input = random.choice(choices)
+computer_choice = options[int(computer_input)]
+
+player_input = input("0 for rock, 1 for paper and 2 for scissors: ")
+
+player_choice = options[int(player_input)]
+
+print(player_input)
+print(computer_input)
+
+if player_input == "0" and computer_input == "0":
+  print(f"{player_choice}\n{computer_choice}\nIt's a draw")
+elif player_input == "0" and computer_input == "1":
+  print(f"{player_choice}\n{computer_choice}\nThe computer wins!")
+elif player_input == "0" and computer_input == "2":
+  print(f"{player_choice}\n{computer_choice}\nThe player wins!")
+elif player_input == "1" and computer_input == "1":
+  print(f"{player_choice}\n{computer_choice}\nIt's a draw")
+elif player_input == "1" and computer_input == "2":
+  print(f"{player_choice}\n{computer_choice}\nThe computer wins!")
+elif player_input == "1" and computer_input == "0":
+  print(f"{player_choice}\n{computer_choice}\nThe player wins!")
+elif player_input == "2" and computer_input == "2":
+  print(f"{player_choice}\n{computer_choice}\nIt's a draw")
+elif player_input == "2" and computer_input == "0":
+  print(f"{player_choice}\n{computer_choice}\nThe computer wins!")
+elif player_input == "2" and computer_input == "1":
+  print(f"{player_choice}\n{computer_choice}\nThe player wins!")
+else:
+  print("ERROR")
